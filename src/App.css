@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --font: "Inter", sans-serif;
+  
+    --primary-100: #F26CF9;
+    --primary-90: #F589FA;
+    --primary-50: #FCD3FE;
+    --primary-40: #FCE2FE;
+    --primary-30: #FDEDFE;
+  
+    --secondary-110: #1C2346;
+    --secondary-100: #37437D;
+    --secondary-90: #5562A2;
+    --secondary-70: #707DBF;
+    --secondary-60: #7D87DF;
+    --secondary-50: #D3DAF9;
+  
+    --yellow-100: #FFCA39;
+    --yellow-90: #FFFCC3;
+    --yellow-10: #FFFFF3;
+  
+    --gray-10: #F7F7F7;
+    --gray-20: #EDEDED;
+    --gray-30: #E0E0E1;
+    --gray-40: #C3C3C4;
+    --gray-50: #9F9FA1;
+    --gray-60: #777779;
+    --gray-70: #616165;
+    --gray-90: #434345;
+  
+    --cool-gray-10: #EEEEFF;
+    --cool-gray-20: #E4E5F5;
+    --cool-gray-30: #DBDDED;
+    --cool-gray-40: #D1D2E0;
+    --cool-gray-50: #B0B1BD;
+    --cool-gray-60: #8F8F99;
+    --cool-gray-70: #727373;
+    --cool-gray-80: #56565C;
+    --cool-gray-90: #39393D;
+    --cool-gray-100: #131314;
+
+    --headline-color: var(--secondary-100);
+    --text-color: var(--gray-100);
+    --text-muted-color: var(--gray-60);
+    --background-color: var(--gray-10);
+    --nav-background-color: var(--cool-gray-20);
+    --header-background-color: var(--gray-20);
+    --main-background-color: var(--gray-20);
+    --footer-background-color: var(--gray-20);
+    --section-background-color: var(--gray-20);
+    --border-color: var(--gray-40);
+
+    --separator-border-color: var(--gray-40);
+    --separator-text-color: var(--gray-60);
+    --separator-background-color: var(--gray-10);
+
+    --link-color: var(--primary-100);
+    --link-hover-color: var(--primary-90);
+
+    --card-background-color: var(--gray-10);
+    --card-border-color: var(--gray-20);
+
+    --button-text-color: var(--gray-90);
+    --button-border-color: transparent;
+    --button-background-color: transparent;
+    --button-hover-text-color: var(--gray-90);
+    --button-hover-border-color: transparent;
+    --button-hover-background-color: transparent;
+    --button-link-text-color: var(--primary-100);
+    --button-link-border-color: transparent;
+    --button-link-background-color: transparent;
+    --button-link-hover-text-color: var(--primary-100);
+    --button-link-hover-border-color: transparent;
+    --button-link-hover-background-color: transparent;
+    --button-primary-text-color: var(--gray-10);
+    --button-primary-border-color: var(--primary-100);
+    --button-primary-background-color: var(--primary-100);
+    --button-primary-hover-text-color: var(--gray-10);
+    --button-primary-hover-border-color: var(--primary-90);
+    --button-primary-hover-background-color: var(--primary-90);
+    --button-secondary-text-color: var(--secondary-100);
+    --button-secondary-border-color: var(--cool-gray-10);
+    --button-secondary-background-color: var(--cool-gray-10);
+    --button-outline-text-color: var(--gray-90);
+    --button-outline-border-color: var(--gray-30);
+    --button-outline-background-color: transparent;
+
+    --input-background-color: var(--gray-10);
+    --input-border-color: var(--gray-40);
+    --input-border-focus-color: var(--primary-50);
+    --input-text-color: var(--gray-100);
+    --input-placeholder-color: var(--gray-50);
+
+    --checkbox-background-color: var(--gray-10);
+    --checkbox-border-color: var(--gray-40);
+    --checkbox-checked-background-color: var(--primary-100);
+    --checkbox-checked-border-color: var(--primary-100);
+    --checkbox-checked-text-color: var(--gray-10);
+  }
+
+  html, body {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.portal-wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;                   
+  grid-template-rows: auto 1fr auto;                  
+  grid-template-areas: 
+    "nav header"
+    "nav main"
+    "nav footer";
+  gap: 1.5rem;                                        
+  height: 100dvh;
+  padding: 1rem;                                      
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--nav-background-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+
+
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo {
+  width: 32px;
+  height: auto;
+}
+
+.nav-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--headline-color);
+}
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+
+.nav-links li a {
+  display: flex;            
+  align-items: center;      
+  gap: 0.5rem;              
+  padding: 0.5rem 0;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+
+.nav-links li a:hover {
+  color: var(--link-hover-color);
+}
+header {
+    grid-area: header;
+    background-color: var(--header-background-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--main-background-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--footer-background-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+}
+
+
+.booking-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: var(--cool-gray-20);
+  padding: 2rem;
+}
+
+
+.booking-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--card-background-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.booking-form h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  color: var(--headline-color);
+  text-align: center;
+}
+
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+
+.booking-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted-color);
+}
+
+
+.booking-form .form-group input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.5rem;
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+.booking-form .form-group input::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.booking-form .form-group input:focus {
+  outline: none;
+  border-color: var(--input-border-focus-color);
+  box-shadow: 0 0 0 3px var(--primary-30);
+}
+
+.booking-form .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--button-primary-text-color);
+  background-color: var(--primary-100);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+
+.booking-form .btn-submit:hover {
+  background-color: var(--primary-90);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.event-details .event-image {
+  width: 100%;
+  height: 300px;
+  background-color: var(--cool-gray-20);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+
+.event-details .event-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--card-background-color);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.event-details .event-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--headline-color);
+}
+
+.event-details .event-header .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-100);
+}
+
+
+.event-details .event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted-color);
+  margin-top: 0.5rem;
+}
+
+
+.event-details .section {
+  background-color: var(--card-background-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.event-details .section h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--headline-color);
+}
+
+
+.event-details .terms-box {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--separator-border-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+}
+
+
+.event-details .btn-book {
+  align-self: start;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--button-primary-text-color);
+  background-color: var(--primary-100);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.event-details .btn-book:hover {
+  background-color: var(--primary-90);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+#events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-image {
+  width: 100%;
+  height: 140px;
+  background-color: var(--cool-gray-20);
+}
+
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--secondary-100);
+}
+
+.card-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: auto;
+}
+
+.card-price {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-100);
+}
